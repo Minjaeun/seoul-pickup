@@ -4,7 +4,7 @@
 온라인 품절 상품, 신세계 강남·에비뉴엘 잠실·코엑스 등 서울 단독 매장·팝업 재고를
 매장에서 직접 구매한 뒤 영수증·실물·포장 사진과 함께 전국 택배로 발송하는 서비스를 소개합니다.
 
-- 라이브: https://minjaeun.github.io/seoul-pickup/
+- 라이브: https://gangnam-pickup.vercel.app/
 - 문의: 카카오 1:1 오픈채팅 https://open.kakao.com/o/sMTEqpVi
 
 ## 구성

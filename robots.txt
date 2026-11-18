@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # 강남 구매대행 서비스 — 강남·잠실 백화점·단독매장 구매대행 (지방 거주자 전국 택배)
-Sitemap: https://minjaeun.github.io/seoul-pickup/sitemap.xml
+Sitemap: https://gangnam-pickup.vercel.app/sitemap.xml
