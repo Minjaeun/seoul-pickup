@@ -10,9 +10,10 @@
 </style>
 </head>
 <body>
-<iframe id="f" src="/seoul-pickup/" title="모바일 미리보기"></iframe>
+<iframe id="f" src="/seoul-pickup/?pv=9" title="모바일 미리보기"></iframe>
 <script>
-  if (location.hash) { document.getElementById('f').src = '/seoul-pickup/' + location.hash; }
+  var base = '/seoul-pickup/?pv=9';
+  if (location.hash) { document.getElementById('f').src = base + location.hash; }
 </script>
 </body>
 </html>
