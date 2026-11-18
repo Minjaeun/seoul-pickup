@@ -11,6 +11,8 @@
 
 에디토리얼 톤(종이색 배경·헤어라인 표·세리프 제목)의 단일 컬럼 랜딩. 이미지 일러스트 없이 타이포그래피와 실제 조건 정보로만 구성합니다.
 
+지점별 구매 가능 브랜드 섹션(`#brands`)은 각 백화점 공식 층별 안내(2026년 11월 확인)를 기준으로 정리했습니다. 매장 이동·재고는 방문 시점 기준이며, 목록에 없는 브랜드도 같은 백화점에 있으면 문의 가능으로 안내합니다.
+
 | 파일 | 설명 |
 | --- | --- |
 | `index.html` | 단일 페이지 랜딩 (모바일 우선, 인라인 CSS) |
@@ -21,19 +23,20 @@
 
 ## 검색·AI 노출 (GEO)
 
-- `Service` + `WebPage` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 6문항과 문구가 100% 일치
+- `Service` + `WebPage` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 7문항과 문구가 100% 일치
 - 명확한 `title` / `meta description` / Open Graph / Twitter 카드
 - 시맨틱 HTML5(`header`·`main`·`section`·`article`), 모바일 우선 반응형
 
 ## 배포
 
-GitHub Pages가 **`gh-pages` 브랜치(root)** 를 서빙합니다.
-`main`을 수정한 뒤 `gh-pages`로 미러링하면 반영됩니다(약 1분 소요).
+라이브는 **Vercel**(`gangnam-pickup`, Hobby)이며, GitHub `main`을 수정한 뒤 CLI로 직접 배포합니다. GitHub Pages(`gh-pages`, root)는 옛 주소용 미러입니다.
 
 ```bash
 git add -A && git commit -m "update"
 git push origin main
 git push origin main:gh-pages
+export PATH=/workspace/.local/node/node-v20.18.0-linux-x64/bin:$PATH
+/workspace/.local/npm-global/bin/vercel deploy --prod --yes --token=$(cat /workspace/.local/vercel/token)
 ```
 
 ## 확정 조건 (요약)
