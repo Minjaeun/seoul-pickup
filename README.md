@@ -9,18 +9,19 @@
 
 ## 구성
 
+에디토리얼 톤(종이색 배경·헤어라인 표·세리프 제목)의 단일 컬럼 랜딩. 이미지 일러스트 없이 타이포그래피와 실제 조건 정보로만 구성합니다.
+
 | 파일 | 설명 |
 | --- | --- |
 | `index.html` | 단일 페이지 랜딩 (모바일 우선, 인라인 CSS) |
 | `robots.txt` | 검색 색인 허용 + sitemap 위치 |
 | `sitemap.xml` | 단일 URL 사이트맵 |
-| `assets/hero.jpg` | 히어로 일러스트 |
-| `assets/og-image.jpg` | Open Graph 공유 이미지 (1200×630) |
+| `assets/og-image.jpg` | Open Graph 공유 이미지 (1200×630, 타이포그래피) |
 | `assets/favicon.svg` | 파비콘 |
 
 ## 검색·AI 노출 (GEO)
 
-- `Service` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 6문항과 문구가 100% 일치
+- `Service` + `WebPage` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 5문항과 문구가 100% 일치
 - 명확한 `title` / `meta description` / Open Graph / Twitter 카드
 - 시맨틱 HTML5(`header`·`main`·`section`·`article`), 모바일 우선 반응형
 
