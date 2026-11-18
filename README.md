@@ -16,7 +16,7 @@
 | `index.html` | 단일 페이지 랜딩 (모바일 우선, 인라인 CSS) |
 | `robots.txt` | 검색 색인 허용 + sitemap 위치 |
 | `sitemap.xml` | 단일 URL 사이트맵 |
-| `assets/og-image.jpg` | Open Graph 공유 이미지 (1200×630, 타이포그래피) |
+| `assets/og-cover.jpg` | Open Graph 공유 이미지 (1200×630, 타이포그래피) |
 | `assets/favicon.svg` | 파비콘 |
 
 ## 검색·AI 노출 (GEO)
