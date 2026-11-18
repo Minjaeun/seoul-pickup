@@ -377,7 +377,8 @@
   footer a{border-bottom:1px solid var(--rule);padding-bottom:1px;color:var(--ink-soft)}
 
   /* ---------- mobile bar ---------- */
-  .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:9px 16px calc(9px + env(safe-area-inset-bottom));background:rgba(245,242,234,.97);border-top:1px solid var(--rule);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+  .mobile-bar{position:fixed;left:0;right:0;bottom:0;z-index:50;padding:9px 16px calc(9px + env(safe-area-inset-bottom));background:rgba(245,242,234,.97);border-top:1px solid var(--rule);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transform:translateY(115%);transition:transform .22s ease}
+  .mobile-bar.is-on{transform:translateY(0)}
   .mobile-bar .btn{max-width:none;width:100%;min-height:50px;font-size:14.5px}
   @media (min-width:820px){ .mobile-bar{display:none} }
   .mb-pad{height:74px}
@@ -660,6 +661,17 @@
 </footer>
 
 <div class="mb-pad" aria-hidden="true"></div>
+
+<script>
+(function () {
+  var bar = document.querySelector('.mobile-bar');
+  var cta = document.querySelector('.hero-cta .btn');
+  if (!bar || !cta || !('IntersectionObserver' in window)) { if (bar) bar.classList.add('is-on'); return; }
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) { bar.classList.toggle('is-on', !entry.isIntersecting); });
+  }, { rootMargin: '-60px 0px 0px 0px' }).observe(cta);
+})();
+</script>
 
 </body>
 </html>
