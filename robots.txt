@@ -1,5 +1,43 @@
+# 강남 구매대행 — 강남·잠실 백화점 구매대행·픽업 대행 (전국 택배)
+# 검색엔진과 AI 검색·LLM 크롤러를 모두 허용합니다.
+# AI용 사이트 요약: https://gangnam-pickup.vercel.app/llms.txt
+
 User-agent: *
 Allow: /
 
-# 강남 구매대행 서비스 — 강남·잠실 백화점·단독매장 구매대행 (지방 거주자 전국 택배)
+# 검색엔진
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI 검색·LLM 크롤러
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://gangnam-pickup.vercel.app/sitemap.xml

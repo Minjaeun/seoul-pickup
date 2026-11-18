@@ -13,17 +13,23 @@
 
 지점별 구매 가능 브랜드 섹션(`#brands`)은 각 백화점 공식 층별 안내(2026년 11월 확인)를 기준으로 정리했습니다. 매장 이동·재고는 방문 시점 기준이며, 목록에 없는 브랜드도 같은 백화점에 있으면 문의 가능으로 안내합니다.
 
+브랜드 목록은 `<details><summary>` 아코디언으로 기본 접힘 상태입니다. 요약줄에는 지점명·방문 가능 시간·브랜드 개수만 보이고, 클릭하면 카테고리별 브랜드 목록이 펼쳐집니다. 접힌 상태에서도 모든 브랜드 텍스트가 DOM에 남아 크롤러가 읽습니다.
+
 | 파일 | 설명 |
 | --- | --- |
 | `index.html` | 단일 페이지 랜딩 (모바일 우선, 인라인 CSS) |
-| `robots.txt` | 검색 색인 허용 + sitemap 위치 |
+| `llms.txt` | AI 검색·LLM 크롤러용 마크다운 요약 (서비스 개요·비용·환불·8개 지점 전체 브랜드 목록) |
+| `robots.txt` | 검색엔진·AI 크롤러 허용 + sitemap 위치 |
 | `sitemap.xml` | 단일 URL 사이트맵 |
 | `assets/og-cover-v2.jpg` | Open Graph 공유 이미지 (1200×630, 타이포그래피) |
 | `assets/favicon.svg` | 파비콘 |
 
 ## 검색·AI 노출 (GEO)
 
-- `Service` + `WebPage` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 7문항과 문구가 100% 일치
+- `Service` + `WebPage` + `FAQPage` 구조화 데이터(JSON-LD) — 본문 FAQ 11문항과 문구가 100% 일치
+- `Service.hasOfferCatalog`에 8개 지점별 구매대행 가능 브랜드(OfferCatalog → Offer/Product+brand)
+- `/llms.txt` — AI 검색 엔진·LLM이 바로 읽는 마크다운 요약(지점별 전체 브랜드 목록 포함)
+- `robots.txt`에 Googlebot·Yeti·Daumoa·Bingbot, OAI-SearchBot·ChatGPT-User·GPTBot·PerplexityBot·ClaudeBot·Claude-SearchBot·Google-Extended 허용
 - 명확한 `title` / `meta description` / Open Graph / Twitter 카드
 - 시맨틱 HTML5(`header`·`main`·`section`·`article`), 모바일 우선 반응형
 
