@@ -26,10 +26,13 @@
 
 ## 배포
 
-GitHub Pages (branch `main`, root). `index.html`을 수정해 푸시하면 자동 반영됩니다.
+GitHub Pages가 **`gh-pages` 브랜치(root)** 를 서빙합니다.
+`main`을 수정한 뒤 `gh-pages`로 미러링하면 반영됩니다(약 1분 소요).
 
 ```bash
-git add -A && git commit -m "update" && git push
+git add -A && git commit -m "update"
+git push origin main
+git push origin main:gh-pages
 ```
 
 ## 확정 조건 (요약)
