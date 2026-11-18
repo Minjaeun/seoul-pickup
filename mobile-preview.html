@@ -16,13 +16,23 @@
 <body>
 <div class="stage">
   <div>
-    <div class="phone"><div class="screen"><iframe src="/seoul-pickup/?v=3" title="mobile top"></iframe></div></div>
+    <div class="phone"><div class="screen"><iframe src="/seoul-pickup/?v=10" title="mobile top"></iframe></div></div>
     <div class="label">390 × 844 (상단)</div>
   </div>
   <div>
-    <div class="phone"><div class="screen"><iframe src="/seoul-pickup/?v=3#price" title="mobile price"></iframe></div></div>
+    <div class="phone"><div class="screen"><iframe src="/seoul-pickup/?v=10#price" title="mobile price"></iframe></div></div>
     <div class="label">390 × 844 (요금·매장)</div>
   </div>
 </div>
+<script>
+  window.addEventListener('load', function () {
+    var frames = document.querySelectorAll('iframe');
+    if (frames[1]) {
+      var d = frames[1].contentDocument;
+      var t = d.getElementById('price');
+      if (t) frames[1].contentWindow.scrollTo(0, t.offsetTop - 8);
+    }
+  });
+</script>
 </body>
 </html>
