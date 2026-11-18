@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# 서울 강남·잠실 백화점 픽업 대행(댈구) — 지방 거주자 전국 택배 대리구매 안내
+Sitemap: https://minjaeun.github.io/seoul-pickup/sitemap.xml
